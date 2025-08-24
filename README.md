@@ -78,7 +78,7 @@ The HorizontalPodAutoscaler (HPA) performed perfectly. As the load increased, th
 **Performance and Timeout Analysis**:
 The `wrk` test results showed that the application was unable to handle the intense load, even with 3 pods.
 
-```text```
+
 Running 30s test @ [http://34.57.163.156/predict](http://34.57.163.156/predict)
   4 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
