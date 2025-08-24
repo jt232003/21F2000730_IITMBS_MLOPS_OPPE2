@@ -60,7 +60,8 @@ Per-sample prediction logging was demonstrated by sending 100 randomly generated
 **Observability**:
 The logs for every single request were automatically captured by **Google Cloud Logging**. The screenshot below shows the access logs in the Logs Explorer, filtered to our specific container, confirming that each of the 100 requests was received and processed with a "200 OK" status.
 
-*[Insert your screenshot of the Logs Explorer here]*
+<img width="1466" height="792" alt="Screenshot 2025-08-24 at 6 30 48 PM" src="https://github.com/user-attachments/assets/70fc3c48-2b76-404c-9196-16c5911c2f30" />
+
 
 ---
 
@@ -71,7 +72,8 @@ A high-concurrency load test was performed using `wrk` to simulate 100 concurren
 **Autoscaling Results**:
 The HorizontalPodAutoscaler (HPA) performed perfectly. As the load increased, the average CPU utilization spiked to over 500%, and the HPA responded by scaling the number of replicas from the minimum of 1 up to the maximum of 3, as configured.
 
-*[Insert your screenshot of the `kubectl get hpa -w` output here]*
+<img width="968" height="256" alt="Screenshot 2025-08-24 at 6 17 48 PM" src="https://github.com/user-attachments/assets/6772dc59-7941-4c5f-9847-254fe2ebf0f5" />
+
 
 **Performance and Timeout Analysis**:
 The `wrk` test results showed that the application was unable to handle the intense load, even with 3 pods.
