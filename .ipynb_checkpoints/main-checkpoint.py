@@ -38,7 +38,7 @@ def predict(data: HeartDiseaseInput):
     input_df = pd.DataFrame([data.dict()])
 
     # Make a prediction
-    prediction = model.predict(input_f)
+    prediction = model.predict(input_df)
     
     # Get the probability of the prediction
     # predict_proba returns probabilities for [class_0, class_1]
